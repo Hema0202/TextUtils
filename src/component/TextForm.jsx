@@ -43,11 +43,11 @@ export default function TextForm(props) {
   // setText("new text");
   return (
     <>
-      <div className="container">
+      <div className="container" style={{color: props.mode==='dark'?'white':'black' }}>
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
-            class="form-control"
+            className="form-control"
             value={text}
             onChange={handleOnChange}
             id="myBox"
@@ -70,7 +70,7 @@ export default function TextForm(props) {
           Inverse Case
         </button>
       </div>
-      <div className="container my-3">
+      <div className="container my-3" style={{color: props.mode==='dark'?'white':'black' }}>
         <h2>Your text summary</h2>
         <p>
           {text.split(" ").length} words and {text.length} characters
